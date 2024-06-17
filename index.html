@@ -146,6 +146,9 @@
 
 			throw new Error('Total CPF contribution does not match any wage brackets.');
 		}
+		function roundUpToTwoDecimalPlaces(number) {
+			return Math.ceil(number * 100) / 100;
+		}
 	</script>
 
 	<script>
@@ -154,7 +157,8 @@
 			const age = parseInt(document.getElementById('age').value);
 			const monthlyCPF = parseInt(document.getElementById('monthlyCPF').value);
 			const estimatedWage = estimateWageFromCPF(date, age, monthlyCPF);
-			document.getElementById('result').textContent = 'Estimated Monthly Income: ' + estimatedWage.toFixed(2);
+			const estimatedWage_roundedUp = roundUpToTwoDecimalPlaces(estimatedWage);
+			document.getElementById('result').textContent = 'Estimated Monthly Income: ' + estimatedWage_roundedUp;
 		}
 	</script>
 </body>
