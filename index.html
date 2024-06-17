@@ -140,7 +140,7 @@
 
 			for (let bracket of config) {
 				if (monthTotalCPFContribution <= bracket.upper) {
-					return (monthTotalCPFContribution - bracket.add) / bracket.rate;
+					return (monthTotalCPFContribution + bracket.add) / bracket.rate;
 				}
 			}
 
