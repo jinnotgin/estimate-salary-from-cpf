@@ -45,11 +45,11 @@
 <body>
 	<div class="container">
 		<h1>Monthly Salary Estimator (from CPF)</h1>
-		<label for="age">Age:</label>
-		<input type="number" id="age" required>
-		<label for="date">Contribution Date:</label>
+		<label for="date">Paid On Date:</label>
 		<input type="date" id="date" required>
-		<label for="monthlyCPF">Contribution Amount ($):</label>
+		<label for="age">Age (during Paid On Date):</label>
+		<input type="number" id="age" required>
+		<label for="monthlyCPF">CPF Contribution Amount ($):</label>
 		<input type="number" id="monthlyCPF" required>
 		<button onclick="onClickEstimate()">Estimate Monthly Salary</button>
 		<div id="result"></div>
